@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: #0b0b0c;
+  color: #e5e7eb;
+}
+
+/* animated bg */
+.bg-animate {
+  background: radial-gradient(circle at 20% 20%, #1a1a2e, transparent),
+              radial-gradient(circle at 80% 80%, #16213e, transparent),
+              #0b0b0c;
+  animation: moveBg 10s infinite alternate;
+}
+
+@keyframes moveBg {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 100% 100%; }
+}
+
+/* UI */
+.glass {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+}
+
+.btn {
+  background: white;
+  color: black;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.input {
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 10px;
+  border-radius: 8px;
+  width: 100%;
+}
